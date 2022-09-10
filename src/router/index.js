@@ -26,7 +26,12 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   if (pathArr.includes(to.path)) {
     // 判断是否登录，已登录跳转到 /user，未登录跳转到 /login
-    console.log(to.path)
+    const token = localStorage.getItem('hm-tt-token')
+    if (token) {
+      next('/user')
+    } else {
+      next('/login')
+    }
   } else {
     next()
   }
