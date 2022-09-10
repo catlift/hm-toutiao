@@ -6,7 +6,12 @@ import router from './router'
 import Vant from 'vant'
 import 'vant/lib/index.css'
 
+// axios
+import axios from '@/util/axios.js'
+
 Vue.use(Vant)
+// user axios --> this.$http
+Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
 
