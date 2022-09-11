@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // 调用 axios.create() 方法，创建 axios 实例对象
 const require = axios.create({
-  baseURL: 'http://www.liulongbin.top:8000',
+  baseURL: '/api/',
   timeout: 3000,
   Headers: { 'Content-Type': 'application/json' }
 })

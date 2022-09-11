@@ -4,7 +4,10 @@ import router from './router'
 
 // vant2
 import Vant from 'vant'
-import 'vant/lib/index.css'
+// 默认引入 css
+// import 'vant/lib/index.css'
+// 定制主体使用 less
+import 'vant/lib/index.less'
 
 // axios
 import axios from '@/util/axios.js'

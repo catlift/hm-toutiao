@@ -41,17 +41,18 @@ export default {
       this.$router.back()
     },
     // 登录提交数据
-    onSubmit(values) {
-      this.$toast('登录成功')
+    onSubmit() {
+      this.$toast.success('登录成功')
 
       // 存储 token，一般登录成功的话，会返回 'Bearer xxxx...', 这里就随便放一点数据
-      localStorage.setItem('hm-tt-token', 'Bearer xxxx')
+      localStorage.setItem('token', 'Bearer xxxx')
 
       // 跳转路由
       this.$router.replace('/user')
     }
     // async login() {
     //   // 还需要获取验证码
+    //   // http://www.liulongbin.top:8000/api.html#
     //   const { data: res } = await this.$http.post('/v1_0/authorizations', this.from)
 
     //   console.log(res)
@@ -62,16 +63,5 @@ export default {
 
 <style lang="less" scoped>
 .login-container {
-  /deep/ .van-nav-bar {
-    background-color: #1989fa;
-
-    .van-nav-bar__left * {
-      color: white;
-    }
-
-    .van-nav-bar__title {
-      color: white;
-    }
-  }
 }
 </style>
